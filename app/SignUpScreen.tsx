@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, CheckBox } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
+
 const SignupScreen = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
