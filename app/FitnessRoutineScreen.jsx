@@ -8,7 +8,7 @@ const FitnessRoutineScreen = () => {
     const navigation = useNavigation();
 
   const handleContinue = () => {
-    navigation.navigate('FitnessRoutineScreen');
+    navigation.navigate('WantToAchieveScreen');
     };
     const handlePrevious = () => {
         navigation.navigate('GenderSelectionScreen');
@@ -43,14 +43,14 @@ const FitnessRoutineScreen = () => {
       <TouchableOpacity
         className="absolute bottom-10 left-6 bg-white w-14 h-14 rounded-full items-center justify-center"
       >
-        <FontAwesome name="arrow-left" size={24} color="black" />
+        <FontAwesome name="arrow-left" size={24} color="black" onPress={handlePrevious}/>
       </TouchableOpacity>
 
       {/* Right Arrow Button */}
       <TouchableOpacity
         className="absolute bottom-10 right-6 bg-accent w-14 h-14 rounded-full items-center justify-center"
       >
-        <FontAwesome name="arrow-right" size={24} color="black" onPress={handlePrevious}/>
+        <FontAwesome name="arrow-right" size={24} color="black" onPress={handleContinue} />
       </TouchableOpacity>
     </SafeAreaView>
   );

@@ -5,6 +5,7 @@ import SignupScreen from './SignUpScreen';
 import LoginScreen from './LoginScreen';
 import GenderSelectionScreen from './GenderSelectionScreen';
 import FitnessRoutineScreen from './FitnessRoutineScreen';
+import WantToAchieveScreen from './WantToAchieveScreen';
 import '../global.css'
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +16,7 @@ const App = () => {
         <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
         <Stack.Screen name="GenderSelection" component={GenderSelectionScreen} options={{ headerShown: false }} />
         <Stack.Screen name="FitnessRoutineSelection" component={FitnessRoutineScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="WantToAchieveSelection" component={WantToAchieveScreen} options={{ headerShown: false }}  />
       </Stack.Navigator>
   );
 };
