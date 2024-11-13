@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, CheckBox } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
-
+import { useNavigation } from '@react-navigation/native';
 
 const SignupScreen = () => {
+  const navigation = useNavigation();
   const [isChecked, setIsChecked] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [focusedInput, setFocusedInput] = useState(null);
@@ -17,12 +18,12 @@ const SignupScreen = () => {
   };
 
   return (
-    <View className='flex-1 bg-black px-6 py-8'>
-      <Text className='text-2xl font-bold text-white'>
+    <View className="flex-1 bg-black px-6 py-8">
+      <Text className="text-2xl font-bold text-white">
         Let's get rolling{' '}
         <Text style={{ fontSize: 24 }}>💪</Text>
       </Text>
-      <Text className='text-gray-400 mt-1 mb-6'>
+      <Text className="text-gray-400 mt-1 mb-6">
         Create an account to get started
       </Text>
 
@@ -47,7 +48,7 @@ const SignupScreen = () => {
         onFocus={() => handleFocus('email')}
         onBlur={handleBlur}
       />
-      <View className='relative mt-4'>
+      <View className="relative mt-4">
         <TextInput
           placeholder="Create password"
           placeholderTextColor="gray"
@@ -58,44 +59,45 @@ const SignupScreen = () => {
         />
         <TouchableOpacity
           onPress={() => setPasswordVisible(!passwordVisible)}
-          className='absolute right-2 top-3'
+          className="absolute right-2 top-3"
         >
           <FontAwesome name={passwordVisible ? 'eye-slash' : 'eye'} size={20} color="gray" />
         </TouchableOpacity>
       </View>
 
-      <Text className='text-gray-400 text-xs mt-2'>
-        Password should contain
-      </Text>
-      <Text className='text-gray-400 text-xs'>• At least 8 characters</Text>
-      <Text className='text-gray-400 text-xs'>• Upper and lower case</Text>
-      <Text className='text-gray-400 text-xs mb-6'>
-        • At least one number or symbol
-      </Text>
+      <Text className="text-gray-400 text-xs mt-2">Password should contain</Text>
+      <Text className="text-gray-400 text-xs">• At least 8 characters</Text>
+      <Text className="text-gray-400 text-xs">• Upper and lower case</Text>
+      <Text className="text-gray-400 text-xs mb-6">• At least one number or symbol</Text>
 
-      <TouchableOpacity className='bg-gray-200 rounded-lg py-3 flex-row items-center justify-center mb-4'>
+      <TouchableOpacity className="bg-gray-200 rounded-lg py-3 flex-row items-center justify-center mb-4">
         <FontAwesome name="apple" size={20} color="black" />
-        <Text className='text-black ml-2'>Continue with Apple</Text>
+        <Text className="text-black ml-2">Continue with Apple</Text>
       </TouchableOpacity>
-      <TouchableOpacity className='bg-gray-200 rounded-lg py-3 flex-row items-center justify-center mb-4'>
+      <TouchableOpacity className="bg-gray-200 rounded-lg py-3 flex-row items-center justify-center mb-4">
         <FontAwesome name="google" size={20} color="black" />
-        <Text className='text-black ml-2'>Continue with Google</Text>
+        <Text className="text-black ml-2">Continue with Google</Text>
       </TouchableOpacity>
 
-      <View className='flex-row items-center mb-4'>
+      <View className="flex-row items-center mb-4">
         <CheckBox value={isChecked} onValueChange={setIsChecked} />
-        <Text className='text-gray-400 ml-2'>
-          I agree to the <Text className='text-white underline'>terms and conditions</Text> of use
+        <Text className="text-gray-400 ml-2">
+          I agree to the <Text className="text-white underline">terms and conditions</Text> of use
         </Text>
       </View>
 
-      <TouchableOpacity className='bg-gray-800 rounded-lg py-3'>
-        <Text className='text-white text-center'>Create my account</Text>
+      <TouchableOpacity className="bg-gray-800 rounded-lg py-3">
+        <Text className="text-white text-center">Create my account</Text>
       </TouchableOpacity>
 
-      <Text className='text-gray-400 text-center mt-6'>
+      <Text className="text-gray-400 text-center mt-6">
         Already have an account?{' '}
-        <Text className='text-yellow-400 underline'>Log in</Text>
+        <Text
+          className="text-yellow-400 underline"
+          onPress={() => navigation.navigate('Login')}
+        >
+          Log in
+        </Text>
       </Text>
     </View>
   );

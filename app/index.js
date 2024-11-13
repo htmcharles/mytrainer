@@ -1,14 +1,22 @@
-// App.js
-import React from "react";
-import { View, Text } from "react-native";
-import { SafeAreaProvider } from "react-native-safe-area-context";
-import "../global.css";
-import SignUpScreen from "./SignUpScreen.tsx"
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import SignupScreen from './SignUpScreen';
+import LoginScreen from './LoginScreen';
+import GenderSelectionScreen from './GenderSelectionScreen';
+import FitnessRoutineScreen from './FitnessRoutineScreen';
+import '../global.css'
+const Stack = createNativeStackNavigator();
 
-export default function App() {
+const App = () => {
   return (
-    <SafeAreaProvider>
-        <SignUpScreen />
-      </SafeAreaProvider>
+      <Stack.Navigator initialRouteName="Signup">
+        <Stack.Screen name="Signup" component={SignupScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="GenderSelection" component={GenderSelectionScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="FitnessRoutineSelection" component={FitnessRoutineScreen} options={{ headerShown: false }} />
+      </Stack.Navigator>
   );
-}
+};
+
+export default App;
