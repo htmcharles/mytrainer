@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, SafeAreaView, Picker } from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -39,11 +38,14 @@ const IdealTimeScreen = () => {
         </Picker>
       </View>
 
-      {/* Reminder Checkbox */}
-      <View className="flex-row items-center mt-4">
-        <CheckBox value={reminder} onValueChange={setReminder} />
+      {/* Reminder Icon */}
+      <TouchableOpacity
+        className="flex-row items-center mt-4"
+        onPress={() => setReminder(!reminder)}
+      >
+        <FontAwesome name={reminder ? 'bell' : 'bell-o'} size={24} color={reminder ? 'gold' : 'gray'} />
         <Text className="text-text-primary ml-2">I want a daily reminder to work out at this time</Text>
-      </View>
+      </TouchableOpacity>
 
       {/* Navigation Buttons */}
       <View className="absolute bottom-0 left-0 right-0 h-24 flex-row items-center justify-between px-6">

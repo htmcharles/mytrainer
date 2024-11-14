@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 const SignupScreen = () => {
   const navigation = useNavigation();
-  const [isChecked, setIsChecked] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [focusedInput, setFocusedInput] = useState(null);
 
@@ -81,7 +79,7 @@ const SignupScreen = () => {
       </TouchableOpacity>
 
       <View className="flex-row items-center mb-4">
-        <CheckBox value={isChecked} onValueChange={setIsChecked} />
+        <FontAwesome name="check-circle" size={20} color="gray" />
         <Text className="text-gray-400 ml-2">
           I agree to the <Text className="text-white underline">terms and conditions</Text> of use
         </Text>
