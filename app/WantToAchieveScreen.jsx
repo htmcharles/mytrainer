@@ -9,7 +9,7 @@ const WantToAchieveScreen = () => {
   const [selectedAchievements, setSelectedAchievements] = useState([]);
 
   const handleContinue = () => {
-    navigation.navigate('WantToAchieveScreen');
+    navigation.navigate('MuscleSelectScreen');
   };
 
   const handlePrevious = () => {
@@ -52,15 +52,15 @@ const WantToAchieveScreen = () => {
       <BlurView intensity={10} tint="dark" className="absolute bottom-0 left-0 right-0 h-24 flex-row items-center justify-between px-6">
         {/* Left Arrow Button */}
         <TouchableOpacity
-          className="bg-white w-14 h-14 rounded-full items-center justify-center"
+          className="bg-secondary w-14 h-14 rounded-12 items-center justify-center"
           onPress={handlePrevious}
         >
-          <FontAwesome name="arrow-left" size={24} color="black" />
+          <FontAwesome name="arrow-left" size={24} color="white" />
         </TouchableOpacity>
 
         {/* Right Arrow Button */}
         <TouchableOpacity
-          className="bg-accent w-14 h-14 rounded-full items-center justify-center"
+          className="bg-accent w-14 h-14 rounded-12 items-center justify-center"
           onPress={handleContinue}
         >
           <FontAwesome name="arrow-right" size={24} color="black" />

@@ -37,7 +37,7 @@ const GenderSelectionScreen = () => {
       </View>
 
       <TouchableOpacity
-        className="absolute bottom-10 right-6 bg-accent w-14 h-14 rounded-full items-center justify-center"
+        className="absolute bottom-10 right-6 bg-accent w-14 h-14 rounded-12 items-center justify-center"
       >
         <FontAwesome name="arrow-right" size={24} color="#000" onPress={handleContinue}/>
       </TouchableOpacity>

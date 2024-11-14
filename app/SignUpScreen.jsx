@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, CheckBox } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import CheckBox from '@react-native-community/checkbox';
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 

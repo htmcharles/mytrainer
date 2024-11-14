@@ -23,7 +23,7 @@ const FitnessRoutineScreen = () => {
       </View>
 
       <View className="mt-10 space-y-4">
-        {['Yes', 'No'].map((routine) => (
+        {['Yes', 'No',].map((routine) => (
           <TouchableOpacity
             key={routine}
             onPress={() => setSelectedRoutine(routine)}
@@ -41,14 +41,14 @@ const FitnessRoutineScreen = () => {
 
       {/* Left Arrow Button */}
       <TouchableOpacity
-        className="absolute bottom-10 left-6 bg-white w-14 h-14 rounded-full items-center justify-center"
+        className="absolute bottom-10 left-6 bg-secondary w-14 h-14 rounded-12 items-center justify-center"
       >
-        <FontAwesome name="arrow-left" size={24} color="black" onPress={handlePrevious}/>
+        <FontAwesome name="arrow-left" size={24} color="white" onPress={handlePrevious}/>
       </TouchableOpacity>
 
       {/* Right Arrow Button */}
       <TouchableOpacity
-        className="absolute bottom-10 right-6 bg-accent w-14 h-14 rounded-full items-center justify-center"
+        className="absolute bottom-10 right-6 bg-accent w-14 h-14 rounded-12 items-center justify-center"
       >
         <FontAwesome name="arrow-right" size={24} color="black" onPress={handleContinue} />
       </TouchableOpacity>
