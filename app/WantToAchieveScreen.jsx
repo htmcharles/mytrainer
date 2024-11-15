@@ -36,7 +36,7 @@ const WantToAchieveScreen = () => {
           <TouchableOpacity
             key={achievement}
             onPress={() => toggleAchievement(achievement)}
-            className={`flex-row items-center justify-between px-4 py-3 rounded-lg ${
+            className={`flex-row items-center justify-between px-4 py-3 rounded-lg mb-6 ${
               selectedAchievements.includes(achievement) ? 'border-2 border-accent bg-transparent' : 'border border-border'
             }`}
           >

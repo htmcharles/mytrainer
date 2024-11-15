@@ -20,7 +20,10 @@ module.exports = {
             },
         boxShadow: {
                 'white': '1px 1px 1px 1px rgba(255, 229, 59, 0.2)',
-              },
+            },
+        spacing: {
+                '128': '8rem', // Custom margin value
+              }
       },
     },
     plugins: [],

@@ -56,7 +56,7 @@ const MuscleSelectScreen = () => {
           <TouchableOpacity
             key={muscle}
             onPress={() => toggleMuscle(muscle)}
-            className={`flex-row items-center justify-between px-4 py-3 rounded-lg ${
+            className={`flex-row items-center justify-between px-4 py-3 rounded-lg mb-6 ${
               selectedMuscles.includes(muscle) ? 'border-2 border-accent bg-transparent' : 'border border-border'
             }`}
           >

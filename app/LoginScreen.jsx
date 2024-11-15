@@ -14,13 +14,13 @@ const LoginScreen = () => {
   return (
     <SafeAreaView className="flex-1 bg-background px-6">
       <View className="mt-10">
-        <Text className="text-3xl font-bold text-text-primary">Welcome back</Text>
-        <Text className="text-text-secondary mt-2">Sign in to get active 💪</Text>
+        <Text className="text-3xl font-bold text-text-primary mt-10">Welcome back</Text>
+        <Text className="text-text-secondary mt-4">Sign in to get active 💪</Text>
       </View>
 
       <View className="mt-8">
         <TextInput
-          className="w-full border-b border-border text-text-primary py-2"
+          className="w-full border-b border-border text-text-primary py-2 mb-2"
           placeholder="Email"
           placeholderTextColor="#A9A9A9"
           keyboardType="email-address"
@@ -28,7 +28,7 @@ const LoginScreen = () => {
 
         <View className="relative mt-4">
           <TextInput
-            className="w-full border-b border-border text-text-primary py-2"
+            className="w-full border-b border-border text-text-primary py-2 mb-2"
             placeholder="Password"
             placeholderTextColor="#A9A9A9"
             secureTextEntry
@@ -42,27 +42,27 @@ const LoginScreen = () => {
         </View>
 
         <TouchableOpacity className="mt-4">
-          <Text className="text-text-secondary">Forgot password? <Text className="text-accent">Click here</Text></Text>
+          <Text className="text-text-secondary text-right mb-10">Forgot password? <Text className="text-accent">Click here</Text></Text>
         </TouchableOpacity>
       </View>
 
       <View className="mt-6 space-y-3">
-        <TouchableOpacity className="flex-row items-center justify-center py-3 bg-gray-300 rounded-lg">
+        <TouchableOpacity className="flex-row items-center justify-center py-3 bg-gray-300 rounded-lg mt-10 mb-4">
           <FontAwesome name="apple" size={20} color="#000" />
-          <Text className="text-black ml-2">Sign in with Apple</Text>
+          <Text className="text-black ml-2 mt-">Sign in with Apple</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity className="flex-row items-center justify-center py-3 bg-gray-300 rounded-lg">
+        <TouchableOpacity className="flex-row items-center justify-center py-3 bg-gray-300 rounded-lg mb-128">
           <FontAwesome name="google" size={20} color="#DB4437" />
           <Text className="text-black ml-2">Sign in with Google</Text>
         </TouchableOpacity>
       </View>
 
       <TouchableOpacity
-        className="mt-8 py-3 bg-accent rounded-lg"
+        className="mt-8 py-3 bg-accent rounded-lg mt-10"
         onPress={handleLogin}  // Navigate to GenderSelection on press
       >
-        <Text className="text-text-primary text-center font-semibold">Sign me in</Text>
+        <Text className="text-text-primary text-center font-semibold ">Sign me in</Text>
       </TouchableOpacity>
 
       <View className="mt-4 flex-row justify-center">

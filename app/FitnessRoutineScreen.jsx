@@ -27,7 +27,7 @@ const FitnessRoutineScreen = () => {
           <TouchableOpacity
             key={routine}
             onPress={() => setSelectedRoutine(routine)}
-            className={`flex-row items-center justify-between px-4 py-3 rounded-lg ${
+            className={`flex-row items-center justify-between px-4 py-3 rounded-lg mb-6 ${
               selectedRoutine === routine ? 'border-2 border-accent bg-transparent' : 'border border-border'
             }`}
           >
