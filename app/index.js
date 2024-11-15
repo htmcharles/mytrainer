@@ -1,15 +1,16 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import SignupScreen from './SignUpScreen';
-import LoginScreen from './LoginScreen';
-import GenderSelectionScreen from './GenderSelectionScreen';
-import FitnessRoutineScreen from './FitnessRoutineScreen';
-import WantToAchieveScreen from './WantToAchieveScreen';
-import MuscleSelectScreen from './MuscleSelectScreen';
-import IdealTimeScreen from './IdealTimeScreen';
-import BirthdayScreen from './BirthdayScreen';
-import SubscriptionScreen from './SubscriptionScreen';
-import '../global.css'
+import SignupScreen from './onboarding/SignUpScreen';
+import LoginScreen from './onboarding/LoginScreen';
+import GenderSelectionScreen from './onboarding/GenderSelectionScreen';
+import FitnessRoutineScreen from './onboarding/FitnessRoutineScreen';
+import WantToAchieveScreen from './onboarding/WantToAchieveScreen';
+import MuscleSelectScreen from './onboarding/MuscleSelectScreen';
+import IdealTimeScreen from './onboarding/IdealTimeScreen';
+import BirthdayScreen from './onboarding/BirthdayScreen';
+import SubscriptionScreen from './onboarding/SubscriptionScreen';
+// import HomeScreen from './HomeScreen';  // Import the HomeScreen
+import '../global.css';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,12 +20,13 @@ const App = () => {
       <Stack.Screen name="Signup" component={SignupScreen} options={{ headerShown: false }} />
       <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
       <Stack.Screen name="GenderSelection" component={GenderSelectionScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="FitnessRoutine" component={FitnessRoutineScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="WantToAchieve" component={WantToAchieveScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="MuscleSelection" component={MuscleSelectScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="IdealTime" component={IdealTimeScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="Birthday" component={BirthdayScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="Subscription" component={SubscriptionScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="FitnessRoutineScreen" component={FitnessRoutineScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="WantToAchieveScreen" component={WantToAchieveScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="MuscleSelectScreen" component={MuscleSelectScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="IdealTimeScreen" component={IdealTimeScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="BirthdayScreen" component={BirthdayScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="SubscriptionScreen" component={SubscriptionScreen} options={{ headerShown: false }} />
+      {/* <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} /> Add HomeScreen */}
     </Stack.Navigator>
   );
 };
