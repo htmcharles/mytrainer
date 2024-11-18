@@ -14,7 +14,6 @@ import '../global.css';
 
 const Stack = createNativeStackNavigator();
 
-
 const App = () => {
   return (
     <Stack.Navigator initialRouteName="Signup">
